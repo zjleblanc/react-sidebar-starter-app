@@ -3,8 +3,8 @@
 This repository 
 * is a single page application with React and Redux using TypeScript
 * uses Bootstrap framework and Sass as preprocessor
-* testing with Jest and Enzyme
 * uses webpack as module bundler
+* creates a sidebar for navigation with breadcrumbs in the header
 
 # Install python
 
@@ -29,14 +29,3 @@ npm run build:dev
 npm run start
 ```
 NOTE: Will start the application in localhost:3001 using webpack dev server
-
-# Testing the project
-
-Updating snapshot
-```shell
-npm run test:update-snapshot
-```
-
-```shell
-npm run test
-```# react-sidebar-starter-app

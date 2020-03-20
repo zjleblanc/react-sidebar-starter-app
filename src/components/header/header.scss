@@ -1,9 +1,26 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 @import "../../styles/variables";
-.navigation {
-    .navbar-default {
-        background-color: white;
-        border-color: white;
+$header-bg: $light-bg;
+
+.Header {
+    background-color: $header-bg;
+    color: $primary-text;
+    border-radius: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: $dark-bg;
+
+    .breadcrumb {
+        background-color: inherit;
+        color: inherit;
+
+        .active {
+            color: $dark-text;
+        }
+
+        li+li:before {
+            color: $dark-bg;
+        }
     }
 }

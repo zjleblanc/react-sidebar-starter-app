@@ -16,17 +16,12 @@ body {
     height: auto !important;
 }
 
-.push {
-    height: $push-height;
-}
-
 footer {
     position: absolute;
     left: 0;
-    min-height: $footer-height;
     width: 100%;
-    background-color: #E3E3E3;
-    color: #5E5E5E;
+    background-color: $light-bg;
+    color: $dark-text;
 }
 
 @media screen and (min-width: 992px) {

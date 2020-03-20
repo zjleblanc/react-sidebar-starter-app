@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.sidebar {
+    background-color: $dark-bg;
+    color: $light-text;
+    width: $sidebar-width;
+
+    .list-group-item {
+        border-radius: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        background-color: inherit;
+        color: inherit;
+        border-color: $dark-text;
+
+        &:hover {
+            color: inherit;
+            background-color: $dark-text;
+        }
+    }
+}

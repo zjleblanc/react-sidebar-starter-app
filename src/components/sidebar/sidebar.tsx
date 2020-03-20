@@ -1,3 +1,4 @@
+import "./sidebar.scss";
 import { Resources } from "resources"
 import * as React from "react";
 import Sidebar from "react-sidebar";
@@ -81,7 +82,7 @@ class SidebarComponent extends React.Component<ISidebarComponentProps, ISidebarC
                 docked={true}
                 open={true}
                 transitions={false}
-                styles={{ sidebar: { background: "white" } }}
+                sidebarClassName="sidebar"
             >
                 {this.props.children}
             </Sidebar>

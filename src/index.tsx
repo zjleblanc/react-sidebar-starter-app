@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 import "bootstrap-loader";
+import "./index.scss"
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { createStore, applyMiddleware } from "redux";

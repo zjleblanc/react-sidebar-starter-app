@@ -1,5 +1,5 @@
 export var RoutesResx = {
-    RouteAttributes: {
+    RouteAttributes : {
         "home" : {
             displayName: "Home",
             disabled: false

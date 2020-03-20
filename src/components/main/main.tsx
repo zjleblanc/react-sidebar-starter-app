@@ -28,7 +28,6 @@ const MainContainer: React.StatelessComponent<IMainContainerProps> = (props) => 
         <AuthSideBar history={matchProps.history} >
           <Header history={matchProps.history} />
           <Component {...matchProps} />
-          <div className="push"></div>
           <Footer />
         </AuthSideBar>
       )

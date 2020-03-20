@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 @import "../../styles/variables";
 .footer {
-    padding-top: 60px;
+    padding-top: 10px;
     ul {
         font-size: 11px;
         line-height: 16px;
@@ -10,13 +10,6 @@
         li {
             padding: 0 24px 4px 0;
             display: inline-block;
-            a {
-                color: gray;
-            }
-            a:hover {
-                color: blue;
-                text-decoration: underline;
-            }
         }
     }
 }

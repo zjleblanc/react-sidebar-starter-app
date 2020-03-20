@@ -1,8 +1,21 @@
 export var RoutesResx = {
-    RouteNames: {
-        "home": "Home",
-        "dashboard": "Dashboard",
-        "notfound": "Not Found"
+    RouteAttributes: {
+        "home" : {
+            displayName: "Home",
+            disabled: false
+        },
+        "dashboard" : {
+            displayName: "Dashboard",
+            disabled: false
+        },
+        "user" : {
+            displayName: "User",
+            disabled: true
+        },
+        "notfound" : {
+            displayName: "Not Found",
+            disabled: true
+        },
     }
 }
 

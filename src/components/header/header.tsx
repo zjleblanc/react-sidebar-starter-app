@@ -1,23 +1,22 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-import "./navigation.scss";
+import "./header.scss";
 import { Resources } from "resources"
 import * as React from "react";
-import { withRouter, BrowserRouter as Router, Route, Link } from "react-router-dom";
-import * as PropTypes from "prop-types";
+import { withRouter, Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-interface INavigationComponentState {
+interface IHeaderComponentState {
     route: string
 }
 
-interface INavigationComponentProps {
+interface IHeaderComponentProps {
     history: any;
 }
 
-class NavigationComponent extends React.Component<INavigationComponentProps, INavigationComponentState> {
+class HeaderComponent extends React.Component<IHeaderComponentProps, IHeaderComponentState> {
 
-    constructor(props: INavigationComponentProps) {
+    constructor(props: IHeaderComponentProps) {
         super(props);
         this.state = {
             route : props.history.location.pathname
@@ -37,15 +36,27 @@ class NavigationComponent extends React.Component<INavigationComponentProps, INa
         var base = "/";
 
         routes.forEach((route, idx, arr) => {
-            var routeName = Resources.Routes.RouteNames[route];
-            console.log(route);
-            if(idx === arr.length - 1)
+            var displayName: string;
+            var disabled: boolean;
+
+            if(route in Resources.Routes.RouteAttributes)
             {
-                crumbs.push(<li className="breadcrumb-item active" aria-current="page">{routeName}</li>)
+                displayName = Resources.Routes.RouteAttributes[route].displayName;
+                disabled = Resources.Routes.RouteAttributes[route].disabled;
+            }
+            else
+            {
+                displayName = route;
+                disabled = false;
+            }
+
+            if(idx === arr.length - 1 || disabled)
+            {
+                crumbs.push(<li className="breadcrumb-item active" aria-current="page">{displayName}</li>)
             }
             else 
             {
-                crumbs.push(<li className="breadcrumb-item"><Link to={base + route}>{routeName}</Link></li>)
+                crumbs.push(<li className="breadcrumb-item"><Link to={base + route}>{displayName}</Link></li>)
             }
             base = base + "/" + route;
         });
@@ -61,19 +72,11 @@ class NavigationComponent extends React.Component<INavigationComponentProps, INa
 
     render() {
         return (
-            <div className="navigation">
+            <div className="Header">
                 {this.renderBreadCrumbs()}
             </div>
         )
     }
 }
 
-export const Navigation = withRouter(connect(
-    (state: any) => {
-        return ({
-            isAuthed: state.isAuthed, 
-            isFetching: state.isFetching, 
-            error: state.error 
-        });
-    }
-)(NavigationComponent));
+export const Header = withRouter(HeaderComponent);

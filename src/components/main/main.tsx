@@ -2,10 +2,10 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 import "./main.scss";
 import * as React from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { Navigation, Footer, AuthSideBar } from "components";
+import { Header, Footer, AuthSideBar } from "components";
 import * as userActionCreators from "../../redux/modules/users/users";
 
 interface IMainContainerProps {
@@ -26,7 +26,7 @@ const MainContainer: React.StatelessComponent<IMainContainerProps> = (props) => 
       ) :
       (
         <AuthSideBar history={matchProps.history} >
-          <Navigation history={matchProps.history} />
+          <Header history={matchProps.history} />
           <Component {...matchProps} />
           <div className="push"></div>
           <Footer />

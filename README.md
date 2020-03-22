@@ -1,4 +1,4 @@
-# TypeScript React Redux Bootstrap Sass Webpack Starter
+# React Sidebar Starter
 
 Built on top of this Microsoft repository
 <https://github.com/microsoft/TypeScript-React-Redux-Starter>

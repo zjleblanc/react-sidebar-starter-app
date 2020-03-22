@@ -1,5 +1,8 @@
 # TypeScript React Redux Bootstrap Sass Webpack Starter
 
+Built on top of this Microsoft repository
+<https://github.com/microsoft/TypeScript-React-Redux-Starter>
+
 This repository 
 * is a single page application with React and Redux using TypeScript
 * uses Bootstrap framework and Sass as preprocessor
